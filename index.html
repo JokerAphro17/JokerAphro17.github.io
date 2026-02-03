@@ -30,7 +30,9 @@
                 <li class="item">
                     <a class="link" href="#portfolio">Portfolio</a>
                 </li>
-
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
 
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
@@ -70,13 +72,13 @@
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
                     <p>
-                        I am a passionate full stack web developer with 4 years of experience, specializing in React,
-                        Node.js, and JavaScript-related technologies. I have a solid background in Laravel and also
-                        possess DevOps skills.
+                        I am a passionate full stack web developer with <span id="years-exp">4</span> years of experience (since 2022), specializing in React,
+                        Node.js, and JavaScript-related technologies. I have a solid background in Laravel and DevOps.
+                        I also have a strong interest in <strong>cybersecurity</strong> and <strong>cloud</strong> technologies, and hold a <strong>Master's degree in Cybersecurity</strong>.
                         <br>
                         With a keen eye for detail and a focus on delivering high-quality
                         solutions, I thrive on staying up-to-date with the latest industry trends. My goal is to create
-                        robust, user-friendly web applications that exceed expectations. I am eager to contribute my
+                        robust, secure, and user-friendly applications that exceed expectations. I am eager to contribute my
                         skills and expertise to help drive success in your projects.
                     </p>
                     <button class="btn-rounded btn btn-outline-primary  mt-4" id="btn-cv">Download CV</button>
@@ -178,15 +180,15 @@
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a href="https://mrv-ci.switch-maker.net/" class="portfolio-card" target="_blank">
-                        <img class="portfolio-card-img" src="assets/imgs/mrv.png" class="img-responsive rounded" alt="">
+                    <a href="https://kano.neon-core.com" class="portfolio-card" target="_blank">
+                        <img class="portfolio-card-img" src="assets/imgs/kanno.png" class="img-responsive rounded" alt="">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>
-                                    MRV CI
+                                    Kanno
                                     </h5>
                                     <p class="font-weight-normal">
-                                        Stack : Laravel,
+                                        Stack : NextJs; Nest Js; React native
                                     </p>
                             </span>
                         </span>
@@ -284,6 +286,41 @@
 
 
     <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Restons en contact</p>
+            <h6 class="section-title mb-6">Contact</h6>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="mailto:ilboudosouleymane4@gmail.com" class="contact-card">
+                        <div class="body">
+                            <i class="ti-email icon"></i>
+                            <h6 class="title">Email</h6>
+                            <p class="subtitle">ilboudosouleymane4@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:+22655993984" class="contact-card">
+                        <div class="body">
+                            <i class="ti-mobile icon"></i>
+                            <h6 class="title">Téléphone</h6>
+                            <p class="subtitle">55 99 39 84</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="body">
+                            <i class="ti-comment-alt icon"></i>
+                            <h6 class="title">Discord</h6>
+                            <p class="subtitle">aphro8319</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of contact section -->
 
     <!-- footer -->
     <div class="container">
@@ -317,6 +354,11 @@
 </body>
 <script>
     $(document).ready(function () {
+        // Années d'expérience depuis 2022
+        var startYear = 2022;
+        var yearsExp = new Date().getFullYear() - startYear;
+        $('#years-exp').text(yearsExp);
+
         $('#btn-cv').click(function () {
             window.open('assets/file/cv.pdf', '_blank');
         });
@@ -326,7 +368,7 @@
         $('#hire_me').click(function () {
 
             // open mailto
-            window.open('mailto: ilboudosouleyman@gmail.com');
+            window.open('mailto:ilboudosouleymane4@gmail.com');
         });
     });
 
